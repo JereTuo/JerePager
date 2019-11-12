@@ -6,6 +6,8 @@
 </head>
 
 <body>
+	<script src="js/forms.js"></script>
+
 	<nav class="header">
 		<a href="index.html" class="button"><span>Home</span></a>
 		<a href="about.html" class="button"><span>About</span></a>
@@ -14,43 +16,44 @@
 	</nav>
 	
 	<div class="container">
-		<form>
-		<fieldset>
-			<legend><strong>NAMESTUFF</strong></legend>
-			<table border="1">
-			  <tr>
-				<td>First Name</td>
-				<td>
-				  <input type="text" name="firstname" size="15">
-				</td>
-			  </tr>
-			  
-			  <tr>
-				<td>Last Name</td>
-				<td>
-				  <input type="text" name="lastname" size="15">
-				</td>
-			  </tr>
-			  
-			  <tr>
-				<td>Your E-mail address</td>
-				<td><input type="text" name="email" size="25"></td>
-			  </tr>
-			</table>
-		  </fieldset>
-		  <fieldset>
-			<legend><strong>GENDER</strong></legend>
-			  <table border="1">
-			  <tr>
-				<td>
-					<input type="radio" name="gender" CHECKED VALUE="unspecified">Unspecified
-					<input type="radio" name="gender" CHECKED VALUE="male">Male
-					<input type="radio" name="gender" CHECKED VALUE="female">Female
-				</td>
-			  </tr>
-			</table>
-		</fieldset>
-			<input type="submit" value="Submit" name="submitB" style="margin-top:10px;">
+		<form name="testForm" onsubmit="return validate()">
+			<fieldset>
+				<legend><strong>GENERAL</strong></legend>
+				<table border="1">
+				  <tr>
+					<td>First Name</td>
+					<td>
+					  <input type="text" name="firstname" size="15">
+					</td>
+				  </tr>
+				  
+				  <tr>
+					<td>Last Name</td>
+					<td>
+					  <input type="text" name="lastname" size="15">
+					</td>
+				  </tr>
+				  
+				  <tr>
+					<td>Your E-mail address</td>
+					<td><input type="text" name="email" size="25"></td>
+				  </tr>
+				
+				</table>
+				</fieldset>
+			<fieldset>
+				<legend><strong>GENDER</strong></legend>
+				  <table border="1">
+				  <tr>
+					<td>
+						<input type="radio" name="gender" CHECKED VALUE="unspecified">Unspecified
+						<input type="radio" name="gender" CHECKED VALUE="male">Male
+						<input type="radio" name="gender" CHECKED VALUE="female">Female
+					</td>
+				  </tr>
+				</table>
+			</fieldset>
+		<input type="submit" value="Submit" name="submitB" style="margin-top:10px;">
 		</form>
 	</div>
 </body>
