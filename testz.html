@@ -20,17 +20,35 @@
 </head>
 
 <style>
+
 #dnd
 {
+	display:inline-block;
+}
+
+#av
+{
+	position: relative;
+	float:center;
+	overflow:auto;
+	left: 41%;
+}
+
+#divContainer
+{
+	position: relative;
+	float:center;
+	overflow:auto;
+	left: 40%;
 }
 
 #div1, #div2 
 {
-  float: left;
+	position:relative;
+	float:left;
   width: 170px;
   height: 163px;
-  margin: 10px;
-  display: inline-block;
+  margin: 10px auto;
   border: 1px solid black;
 }
 </style>
@@ -79,7 +97,7 @@
 		</script>
 	</div>
 	
-	<div id="dnd">
+	<div id="dnd" style="width:100%">
 		<script>
 			function allowDrop(ev)
 			{
@@ -96,18 +114,18 @@
 			  ev.target.appendChild(document.getElementById(data));
 			}
 		</script>
-		
+		<div id="divContainer">
 		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 		<img id="drag1" src="peanutbutter.gif" draggable="true" ondragstart="drag(event)" width="170" height="162">
 		</div>
 		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
 	</div>
 	
-	<div>
-	<!DOCTYPE html>
-	<div style="margin-top: 10px">
-		<iframe width="315" height="315" src="Cozy.webm" frameborder="0"></iframe>*
-		<audio controls loop autoplay src="fireplace.wav"></audio>
+	<div id="av" style="width:100%">
+		<iframe width="315" height="315" src="Cozy.webm" frameborder="5" ></iframe>
+		<br>
+		<audio controls loop autoplay src="fireplace.wav" style="margin-top:10px"></audio>
 	</div>
 </body>
 
